@@ -12,7 +12,6 @@ const Navbar = () => {
       .catch((err) => {});
   };
 
-
   return (
     <>
       <Link to="/login">Login</Link>
@@ -20,6 +19,8 @@ const Navbar = () => {
       {user && (
         <span>
           <p>{user.email}</p>
+          <p>{user.displayName}</p>
+          <img src={user.photoURL} alt="" />
           <button onClick={handleLogOut}>LogOut</button>
         </span>
       )}
