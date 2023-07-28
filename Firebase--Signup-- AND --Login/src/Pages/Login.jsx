@@ -20,20 +20,31 @@ const Login = () => {
   };
   return (
     <>
-      <form onSubmit={handleLogIn}>
-        {/* Email Input */}
-        <input type="email" name="email" placeholder="Give Your Email"></input>
-        <br />
-        {/* Password Input */}
-        <input
-          type="password"
-          name="password"
-          placeholder="Give Your Password"
-        ></input>
-        <br />
-        {/* Submit Button */}
-        <button> Login</button>
-      </form>
+      <div className="grid justify-items-center mt-20 ">
+        <form onSubmit={handleLogIn}>
+          {/* Email Input */}
+          <input
+            type="email"
+            name="email"
+            placeholder="Give Your Email"
+            className="input input-bordered input-primary w-full max-w-xs"
+          ></input>
+          <br />
+          {/* Password Input */}
+          <input
+            type="password"
+            name="password"
+            placeholder="Give Your Password"
+            className="input input-bordered input-primary w-full max-w-xs mt-5"
+          ></input>
+          <br />
+          {/* Submit Button */}
+          <button className="btn btn-outline text-black btn-black w-[320px] mt-5">
+            {" "}
+            Login
+          </button>
+        </form>
+      </div>
     </>
   );
 };

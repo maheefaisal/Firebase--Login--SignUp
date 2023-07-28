@@ -28,30 +28,47 @@ const SignUp = () => {
   };
   return (
     <>
-      <form onSubmit={handleSignUp}>
-        {/* Email Input */}
-        <input type="email" name="email" placeholder="Give Your Email"></input>
-        <br />
-        {/* Name Input */}
-        <input type="text" name="name" placeholder="Give Your name"></input>
-        <br />
-        {/* Photo Input */}
-        <input
-          type="text"
-          name="photo"
-          placeholder="Give Your Photo Link"
-        ></input>
-        <br />
-        {/* Password Input */}
-        <input
-          type="password"
-          name="password"
-          placeholder="Give Your Password"
-        ></input>
-        <br />
-        {/* Submit Button */}
-        <button> Sign Up</button>
-      </form>
+      <div className="grid justify-items-center mt-20 ">
+        <form onSubmit={handleSignUp} className="">
+          {/* Email Input */}
+          <input
+            type="email"
+            name="email"
+            placeholder="Give Your Email"
+            className="input input-bordered input-accent w-full max-w-xs "
+          ></input>
+          <br />
+          {/* Name Input */}
+          <input
+            type="text"
+            name="name"
+            placeholder="Give Your name"
+            className="input input-bordered input-accent w-full max-w-xs mt-5"
+          ></input>
+          <br />
+          {/* Photo Input */}
+          <input
+            type="text"
+            name="photo"
+            placeholder="Give Your Photo Link"
+            className="input input-bordered input-accent w-full max-w-xs mt-5"
+          ></input>
+          <br />
+          {/* Password Input */}
+          <input
+            type="password"
+            name="password"
+            placeholder="Give Your Password"
+            className="input input-bordered input-accent w-full max-w-xs mt-5"
+          ></input>
+          <br />
+          {/* Submit Button */}
+          <button className="btn btn-outline text-black btn-warning w-[320px] mt-5">
+            {" "}
+            Sign Up
+          </button>
+        </form>
+      </div>
     </>
   );
 };
